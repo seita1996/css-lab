@@ -13,7 +13,8 @@ body {
 h1 {
     margin: 0;
     padding: 0 1em;
-    color: #fff;
+    color: transparent;
+    text-shadow: 1px 1px 2px #a09775, 0 0 #918761;
     font-size: 80px;
     font-family: 'Yomogi', cursive;
 }
