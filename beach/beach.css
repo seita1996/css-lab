@@ -10,14 +10,56 @@ body {
     margin: 0;
     background: url(noise.png) center,  linear-gradient(#dcd3b2, 90%, #00d0e8);
 }
-h1 {
-    margin: 0;
-    padding: 0 1em;
+
+/* Text start */
+.sunamoji {
     color: transparent;
     text-shadow: 1px 1px 2px #a09775, 0 0 #918761;
     font-size: 80px;
     font-family: 'Yomogi', cursive;
+    text-align: center;
 }
+
+#text {
+    display: flex;
+    flex-direction: column;
+    font-size: 5vw;
+    color: #333;
+}
+#text .char {
+    display: inline-block;
+    min-width: 0.25em;
+    animation: translateX 0.4s cubic-bezier(0.39,0.575,0.565,1) both, fadeIn 0.3s cubic-bezier(0.55,0.055,0.675,0.19) both;
+}
+/* .visuallyHidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+} */
+@keyframes translateX {
+    0% {
+        transform: translateX(25%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Text end */
 
 .lowermost {
     position: absolute;
@@ -28,6 +70,7 @@ h1 {
     width: 100%;
 }
 
+/* Wave start */
 .waves {
     position:relative;
     width: 100%;
@@ -65,3 +108,5 @@ h1 {
         transform: translate3d(85px,0,0);
     }
 }
+
+/* Wave end */
