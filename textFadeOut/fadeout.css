@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
+
+.sunamoji {
+    color: transparent;
+    text-shadow: 1px 1px 2px #a09775, 0 0 #918761;
+    font-size: 80px;
+    font-family: 'Yomogi', cursive;
+    text-align: center;
+}
+
+#text {
+    display: flex;
+    flex-direction: column;
+    font-size: 5vw;
+    color: #333;
+}
+
+.text-blur {
+    filter: blur(0px);
+    opacity: 1;
+    animation: fadeout 5s ease-in forwards;
+}
+
+@keyframes fadeout {
+	100% {
+		filter: blur(20px);
+        opacity: 0;
+	}
+}
